@@ -16,7 +16,7 @@
 
 -- Library init
     getgenv().Library = {
-        Directory = "Bbot v3",
+        Directory = "Shariktools",
         Folders = {
             "/fonts",
             "/configs",
@@ -369,7 +369,6 @@
         local ConfigHolder;
         function Library:UpdateConfigList() 
             if not ConfigHolder then 
-                print("no exist :(")
                 return 
             end
             
@@ -1995,7 +1994,6 @@
 
             function Cfg.ToggleKeybindList(bool)
                 Items.Keybind_List.Visible = bool
-                print(bool)
             end
             
             return setmetatable(Cfg, Library)
@@ -3102,7 +3100,6 @@
                 end)
     
                 if not Cfg.TabInfo then
-                    print("new tab")
                     SubItems.Fill.Size = dim2(1, -2, 0, 1);
                     SubItems.TextPadding.PaddingRight = dim(0, 8);
                     Data.OpenTab()
@@ -4069,7 +4066,6 @@
 
             Library:Connection(InputService.InputBegan, function(input, game_event)
                 if input.UserInputType == Enum.UserInputType.MouseButton1 then
-                    print("clicked")
                     if (Items.DropdownElements.Visible) and not Library:Hovering({Items.DropdownElements, Items.Dropdown}) then
                         Cfg.SetVisible(false)
                         Cfg.Open = false
