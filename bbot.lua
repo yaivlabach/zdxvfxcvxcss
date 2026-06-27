@@ -1901,34 +1901,24 @@
                         Parent = Items.Watermark;
                         Name = "\0";
                         BackgroundTransparency = 1;
-                        Position = dim2(0, 14, 0, -2);
+                        Position = dim2(0, 0, 0, -2);
                         BorderSizePixel = 0;
                         AutomaticSize = Enum.AutomaticSize.XY;
                         TextSize = 12;
                         BackgroundColor3 = rgb(255, 255, 255)
                     });
-                    
+
                     Library:Create( "UIStroke" , {
                         Parent = Items.WatermarkTitle;
                         LineJoinMode = Enum.LineJoinMode.Miter
                     });
-                    
+
                     Library:Create( "UIPadding" , {
                         PaddingTop = dim(0, 5);
                         PaddingBottom = dim(0, 2);
                         Parent = Items.WatermarkTitle;
                         PaddingRight = dim(0, 5);
                         PaddingLeft = dim(0, 5)
-                    });
-                    
-                    Library:Create( "ImageLabel" , {
-                        BorderColor3 = rgb(0, 0, 0);
-                        Parent = Items.Watermark;
-                        BackgroundTransparency = 1;
-                        Position = dim2(0, 3, 0, 2);
-                        Size = dim2(0, 11, 0, 15);
-                        BorderSizePixel = 0;
-                        BackgroundColor3 = rgb(255, 255, 255)
                     });
                 --
             end
